@@ -1,0 +1,655 @@
+html {
+    font-family: Montserrat, sans-serif;
+    font-style: bold;
+    font-weight: 800;
+    background-color: #0A0A0A;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("bg.svg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+header {
+    position: absolute;
+    top: 0;
+    display: flex;
+    padding: 1rem;
+    color: white;
+    width: calc(100% - 2rem);
+    align-items: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.5rem;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#logoAni {
+    height: 2rem;
+    width: 2rem;
+}
+
+#logo {
+    height: 1rem;
+    width: 1rem;
+}
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.5s;
+    min-height: 89vh;
+    margin: 0;
+    flex-direction: column;
+    
+}
+
+
+main {
+
+}
+footer {
+    display: flex;
+    height: 5rem;
+    width: 100%;
+    justify-content: flex-end;
+}
+footer > a {
+    font-size: 0.7rem;
+    margin: 2rem;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    font-weight: 100;
+
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+  margin: 0;
+}
+
+h2 {
+  color: white;
+  margin: 1rem 0 0.3rem 0;
+}
+
+h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+    margin-top: 0;2
+    font-size: 0.8rem;
+}
+
+#StartScreen {
+  display: flex;
+  /*display: flex;*/
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 19rem;
+  width: 45rem;
+
+}
+
+#StartScreen > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  cursor: pointer;
+  font-size: 150%;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  transform: scale(0.9);
+  transition-duration: 0.1s;
+}
+
+.button:active {
+    transform: scale(0.85);
+    transition-duration: 0.1s;
+}
+
+
+
+.startButton {
+    height: 4.5rem;
+    background-color: #49ffce;
+    width: 90%;
+    font-size: 2.5rem;
+    box-shadow: 0 0 1rem #49ffce;
+    
+}
+
+.tutorialButton {
+  height: 3rem;
+  background-color: white;
+  width: 30%;
+
+}
+
+#GameScreen {
+  display: none;
+  flex-direction: row;
+    font-family: Montserrat,"sans-serif";
+    font-weight: bold;
+
+}
+
+#GameScreen > div {
+  display: flex;
+  width: 20rem;
+  height: 26rem;
+  margin: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+}
+
+.nmbrInput {
+    width: 20rem;
+    height: 18rem;
+    border: none;
+    font-size: 10rem;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    background-color: white;
+    caret-color: transparent;
+}
+
+
+/*Das Framework für den Alert Kasten*/
+#notificationFrame {
+    position: absolute;
+    width: 20rem;
+    height: 18rem;
+    border: none;
+    font-size: 10rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    overflow: hidden;
+    pointer-events: none;
+    
+}
+
+
+.alertBox {
+    display: flex;
+    position: absolute;
+    background-color: #DEDEDE;
+    justify-content:flex-start;
+    align-items: center;
+    height: 2.5rem;
+    width: 100%;
+    margin-top: -3rem;
+    animation: alert;
+    animation-duration: 5s;
+    box-shadow:  0 0 1rem;
+    color: #2D2B2B;
+    font-size: 0.8rem;
+    pointer-events: none;
+
+    
+}
+
+.alertIcon {
+    height: 2rem;
+    margin: 1rem;
+}
+
+
+.submitButton {
+    height: 3rem;
+    background-color: #49ffce;
+    box-shadow: 0 0 1rem #49ffce;
+}
+
+.usedFrame {
+    display: flex;
+    height: 3.4rem;
+    opacity: 1;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.usedFrame > div {
+    display: flex;
+    background-color: white;
+    height: 2rem;
+}
+
+.wrongIcon{
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+    background-color: #F55656;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#usedDisplay {
+    display: flex;
+    height: 2rem;
+    align-items: center;
+    margin: 0.5rem;
+    
+    
+}
+
+#usedDisplay > span {
+    text-decoration: line-through;
+    text-decoration-color: #F55656;
+    height: 2rem;
+}
+
+.lives {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 2.5rem;
+  width: 100%;
+  
+}
+
+.lives > div {
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.2rem;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.livesSVG {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.rounds {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  width: 100%;
+}
+
+.roundsDisplay {
+    color: white;
+    margin: 0 0 0.3rem 0;
+    font-size: 1.5rem;
+    
+}
+
+.hintsNpoints {
+  display: flex;
+  width: 20rem;
+  height: 18rem;
+  flex-direction: column;
+
+}
+
+.hint {
+  background-image: url("lock.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1.7rem;
+}
+
+.hint.c {
+    background-image: none;
+}
+
+.points {
+  display: flex;
+  height: 5rem;
+  border-style: solid;
+  border-width: 0.25rem;
+  border-color: white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: rem;
+
+}
+
+.points > div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+}
+
+.points > div > div {
+  color: white;
+}
+
+.tut {
+    width: 50%;
+}
+
+.hints {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 13rem;
+}
+
+.hints > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  background-color: white;
+}
+
+#alert {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+
+#alertDiv {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#alertDiv div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mainMessage {
+  font-size: 6rem;
+  display: none
+}
+
+#secondMessage {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  display: none
+}
+
+#buttonMessage {
+  color: black;
+  background-color: white;
+  width: 20rem;
+  display: none;
+  box-shadow: 0 0 1rem white;
+}
+
+#buttonMessage p {
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+}
+
+#row1 {
+    height: 5rem;
+}
+
+#row2 {
+    height: 8rem;
+}
+
+#row3 {
+    height: 5rem;
+    
+}
+
+
+
+#flasher.active {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: #F55656;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    animation-name: wrong;
+    animation-duration: 0.8s;
+}
+
+.st0{fill:#F55656;}
+
+@keyframes wrong {
+  0% {opacity: 0;}
+  70% {opacity: 0.5;}
+  100% {opacity: 0;}
+}
+
+
+
+
+@keyframes input {
+
+    50% {
+        color: #a8a8a8;
+    }
+}
+
+@keyframes alert {
+    
+    10% {
+        margin-top: 0rem;
+    }
+                    
+    80% {
+        margin-top: 0rem;
+    }
+    90% {
+        margin-top: -4rem;
+    }
+}       
+
+input.game, input.game::-webkit-input-placeholder {
+  color: var(--main-text-color);
+  animation-name: input;
+  animation-duration: 4s;
+  animation-iteration-count:infinite; 
+}
+
+
+
+/*CSS für die Anleitungen etc.*/
+
+article {
+    color: white;
+    width: 44rem;
+    flex-direction: column;
+    
+    
+}
+
+article.text {
+    margin-top: 10rem;
+}
+
+#desc1{
+    display: flex;
+    
+}
+
+#desc2{
+    display: none;
+}
+#desc3{
+    display: none;
+}
+#desc4{
+    display: none;
+}
+#desc5{
+    display: none;
+}
+
+h4 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #49ffce;
+    
+    
+}
+
+h5{
+    font-size: 1.25rem;
+    margin: 0;
+    
+}
+
+article > p {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+}
+
+h6{
+    font-size: 1rem;
+    margin: 2.5rem 0 0.75rem 0;
+    
+}
+
+#nextBtn{
+    background-color: #49ffce;
+    padding: 0.75rem 1.25rem;
+    color: black;
+    font-size: 1.25rem;
+    width: 12.5rem;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    
+}
+
+
+.marker{
+    border-radius: 100%;
+    color:#49ffce;
+    width: 1rem;
+}
+
+/*Kontaktformular*/
+
+#ratingSelect {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+}
+
+#ratingSelect > p {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+#querySelector {
+    display: flex;
+    flex-direction: row;
+    margin: 0 1rem;
+}
+
+
+
+#querySelector > div {
+    background-color: white;
+    color: black;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0 0.5rem;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+#querySelector > div.active {
+    background-color: #49ffce;
+
+}
+
+form.contact {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    
+    
+}
+
+
+input.contact {
+    height: 0.5rem;
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-family: montserrat;
+    font-weight: 800;
+    padding: 1rem;
+}
+
+
+textarea.contact {
+    height: 10rem;
+    max-height: 10rem;
+    width: 30rem;
+    max-width: 29.6rem;
+    resize: none;
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-family: montserrat;
+    font-weight: 800;
+    padding: 1rem;
+}
+
+
+@media only screen and (max-width: 1280px) {
+    html {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    html {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 0.7rem;
+    }
+}

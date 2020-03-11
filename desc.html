@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    
+    <title>NUMBERGUESSER - Anleitung!</title>
+    
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/print.css"><!--CSS für den Druck der Regeln-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="img/logo.png" rel="icon">
+
+
+    <script src="JavaScript/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="JavaScript/animation.js"></script>
+
+</head>
+  <body onload="init()">
+
+
+        <header onclick="window.open('index.html','_self')">
+            <img src="img/logo.png" id="logoAni">
+            <b><span style="color:#49ffce;">NUMBR</span>GUESSER</b>
+        </header>
+        <main>
+            <!--Layout Anleitung-->
+            <article id="desc1">
+                <h5>WILKOMMMEN BEI</h5>
+                <h4>NMBR<span style="color:white" class="white">GUESSER</span></h4>
+                <p>Hier geht es darum dein mathematisches Wissen zu beweisen und so viele Zahlen zu erraten wie du kannst!
+                    Je früher desto besser und mehr Punkte bekommst du auch!</p>
+                <h6>Als nächstes: Die Regeln</h6>
+                <div class="button" id="nextBtn" onclick="nextDesc()">Weiter</div>
+            </article>
+            
+            <article id="desc2">
+                <h5>DIE</h5>
+                <h4 style="green">REGELN</h4>
+                <p>Du startest jede Runde mit 10 Versuchen, die gesuchte Zahl zu erraten! Findest du sie, erhältst du Punkte und darfst weiter Spielen! Findest du      sie nicht, verlierst du die Runde und das Spiel ist für dich vorbei! Damit du die Zahl erraten kannst, bekommst du Tipps!</p>
+                <h6>Als nächstes: Der Ablauf</h6>
+                <div class="button" id="nextBtn" onclick="nextDesc()">Weiter</div>
+            </article>
+            
+            <article id="desc3">
+                <h5>DER</h5>
+                <h4>ABLAUF</h4>
+                <p>Du startest das Spiel ohne hinweise auf die gesuchte Zahl, das ist deine Chance auf die volle Punktzahl, den LuckyHit!
+                    Danach erhältst du Hinweise auf die gesuchte Zahl. Hast du eine Idee? Tippe deine Zahl in das große Eingabefeld und sieh nach! Das Spiel sagt dir dann ob du Recht hattest!</p>
+                <h6>Als nächstes: Die Elemente</h6>
+                <div class="button" id="nextBtn" onclick="nextDesc()">Weiter</div>
+            </article>
+            
+            <article id="desc4">
+                <h5>DIE</h5>
+                <h4>ELEMENTE</h4>
+                <img src="img/tut.png" class="tut">
+                <p><span class="marker">1&nbsp;&nbsp;</span>Hier siehst du deine übrigen Leben für diese Runde! Bei<span class="marker">&nbsp;&nbsp;2&nbsp;&nbsp;</span>werden dir Infos aus dem Spiel angezeigt ! Trage bei<span class="marker">&nbsp;&nbsp;3&nbsp;&nbsp;</span>deine Tipps ein und sende sie     mit<span class="marker">&nbsp;&nbsp;4&nbsp;&nbsp;</span>ab! Bei<span class="marker">&nbsp;&nbsp;5&nbsp;&nbsp;</span>siehst du deine Punkte und deine Runde. Das wohl Wichtigste bei<span class="marker">&nbsp;&nbsp;6&nbsp;&nbsp;</span>: Deine Tipps! Zu letzt noch deine schon getätigten Tipps bei<span class="marker">&nbsp;&nbsp;7&nbsp;&nbsp;</span></p>
+                <h6>Als nächstes: Die Elemente</h6>
+                <div class="button" id="nextBtn" onclick="nextDesc()">Weiter</div>
+            </article>
+            
+            <article id="desc5">
+                <h5>BIST DU</h5>
+                <h4>BEREIT?</h4>
+                <p>Dann leg los und knack den Highscore!</p>
+                <div class="button" id="nextBtn" onclick="window.open('index.html','_self')">Hauptmenü</div>
+            </article>
+            
+            
+            
+            
+
+        </main>
+        <footer>
+            <a>© 2020 |  Jendrik Ludwig</a>
+            <a onclick="window.open('contact.html','_self')">Kontakt</a>
+            <a onclick="window.open('impress.html','_self')">Impressum</a>
+          
+        </footer>
+  </body>
+</html>

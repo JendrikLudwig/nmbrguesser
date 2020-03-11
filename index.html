@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr" onmousedown="mouseFocus()">
+<head>
+    <meta charset="utf-8">
+    <title>NUMBERGUESSER - Try Now!</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="img/logo.png" rel="icon">
+
+
+  <script src="JavaScript/jquery-3.4.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="JavaScript/animation.js"></script>
+  <script src="JavaScript/script.js"></script>
+
+
+
+</head>
+  <body>
+
+    <div id="flasher"></div>
+      
+    <div id="alert" class="alert">
+      <div id="alertDiv">
+        <div id="row1"><div id="mainMessage" class="mainMessage"></div></div>
+
+        <div id="row2"><div id="secondMessage" class="secondMessage"></div></div>
+
+        <div id="row3"><div id="buttonMessage" class="buttonMessage button" onclick="closeAni()"></div></div>
+
+      </div>
+
+    </div>
+
+    <header onclick="window.open('index.html','_self')">
+        <img src="img/logo.png" id="logoAni">
+        <b><span style="color:#49ffce;">NUMBR</span>GUESSER</b>
+        <!--<span> <button type="button" name="button" onclick="debug()">DEBUG</button> </span>-->
+    </header>
+    <main>
+
+      <div id="StartScreen">
+        <div class="">
+          <h1><span style="color:#49ffce;">NUMBR</span>GUESSER</h1>
+        </div>
+        <div class="startButton button" onclick="startGame()">
+          <b>SPIEL STARTEN</b>
+        </div>
+        <div class="tutorialButton button"  onclick="window.open('desc.html','_self')">
+          <b>ANLEITUNG</b>
+        </div>
+      </div>
+
+      <div id="GameScreen">
+        <div>
+          <div class="lives">
+            <div>
+              <svg version="1.1" class="livesSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                <g>
+                    <g>
+                      <path class="st0" id="c9" d="M12.9,16.1L12.9,16.1c-10.8,10.8-10.8,28.2,0,39l17.6,17.6c0.1,0.1,0.2,0.2,0.3,0.3L50,92.1V14.2
+                      C39.1,5.3,23.1,5.9,12.9,16.1z"></path>
+                    </g>
+                    <g>
+                      <path class="st0" id="c8" d="M87.1,16L87.1,16C76.9,5.8,60.8,5.3,50,14.2v77.8l0,0l18.7-18.7c0.3-0.3,0.6-0.5,0.9-0.8h0
+                      c0.3-0.3,0.5-0.6,0.8-0.9L87.1,55C97.8,44.2,97.8,26.8,87.1,16z"></path>
+                    </g>
+              </g>
+              </svg>
+            </div>
+            <div><svg version="1.1" class="livesSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+              <g>
+                  <g>
+                    <path class="st0"  id="c7" d="M12.9,16.1L12.9,16.1c-10.8,10.8-10.8,28.2,0,39l17.6,17.6c0.1,0.1,0.2,0.2,0.3,0.3L50,92.1V14.2
+                    C39.1,5.3,23.1,5.9,12.9,16.1z"></path>
+                  </g>
+                  <g>
+                    <path class="st0"  id="c6" d="M87.1,16L87.1,16C76.9,5.8,60.8,5.3,50,14.2v77.8l0,0l18.7-18.7c0.3-0.3,0.6-0.5,0.9-0.8h0
+                    c0.3-0.3,0.5-0.6,0.8-0.9L87.1,55C97.8,44.2,97.8,26.8,87.1,16z"></path>
+                  </g>
+            </g>
+            </svg></div>
+            <div><svg version="1.1" class="livesSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+
+              <g>
+                  <g>
+                    <path class="st0"  id="c5" d="M12.9,16.1L12.9,16.1c-10.8,10.8-10.8,28.2,0,39l17.6,17.6c0.1,0.1,0.2,0.2,0.3,0.3L50,92.1V14.2
+                    C39.1,5.3,23.1,5.9,12.9,16.1z"></path>
+                  </g>
+                  <g>
+                    <path class="st0"  id="c4" d="M87.1,16L87.1,16C76.9,5.8,60.8,5.3,50,14.2v77.8l0,0l18.7-18.7c0.3-0.3,0.6-0.5,0.9-0.8h0
+                    c0.3-0.3,0.5-0.6,0.8-0.9L87.1,55C97.8,44.2,97.8,26.8,87.1,16z"></path>
+                  </g>
+            </g>
+            </svg></div>
+            <div><svg version="1.1" class="livesSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+
+              <g>
+                  <g>
+                    <path class="st0"  id="c3" d="M12.9,16.1L12.9,16.1c-10.8,10.8-10.8,28.2,0,39l17.6,17.6c0.1,0.1,0.2,0.2,0.3,0.3L50,92.1V14.2
+                    C39.1,5.3,23.1,5.9,12.9,16.1z"></path>
+                  </g>
+                  <g>
+                    <path class="st0"  id="c2" d="M87.1,16L87.1,16C76.9,5.8,60.8,5.3,50,14.2v77.8l0,0l18.7-18.7c0.3-0.3,0.6-0.5,0.9-0.8h0
+                    c0.3-0.3,0.5-0.6,0.8-0.9L87.1,55C97.8,44.2,97.8,26.8,87.1,16z"></path>
+                  </g>
+            </g>
+            </svg></div>
+            <div><svg version="1.1" class="livesSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+              <g>
+                  <g>
+                    <path class="st0"  id="c1" d="M12.9,16.1L12.9,16.1c-10.8,10.8-10.8,28.2,0,39l17.6,17.6c0.1,0.1,0.2,0.2,0.3,0.3L50,92.1V14.2
+                    C39.1,5.3,23.1,5.9,12.9,16.1z"></path>
+                  </g>
+                  <g>
+                    <path class="st0"  id="c0" d="M87.1,16L87.1,16C76.9,5.8,60.8,5.3,50,14.2v77.8l0,0l18.7-18.7c0.3-0.3,0.6-0.5,0.9-0.8h0
+                                                  c0.3-0.3,0.5-0.6,0.8-0.9L87.1,55C97.8,44.2,97.8,26.8,87.1,16z"></path>
+                  </g>
+            </g>
+            </svg></div>
+            <!-- Herzen als Vector platzieren und jeder herz hälfte eine ID zuweisen. Dann selbes Prinzip wie im JS Dummy-->
+          </div>
+
+          <div class="">
+              <div id="notificationFrame">
+              </div>
+            <input id="numberInput" class="nmbrInput game" type="text" name="guess" maxlength="2" placeholder="00" onblur="this.focus()" autofocus style="color: transparent;text-shadow: 0 0 0 #2D2B2B;" onkeypress='return event.charCode >= 48 && event.charCode <= 57'  onblur="this.focus()" autofocus />
+          </div>
+
+          <div id="submitButton" class="submitButton button" onclick="check()">
+            <b>ENTER</b>
+          </div>
+
+        </div>
+        <div>
+          <div class="rounds">
+            <span class="roundsDisplay">RUNDE<span id="currentRound" style="color:#49ffce;text-shadow: 0 0 1rem #49ffce;">0</span></span>
+          </div>
+
+          <div class="hintsNpoints">
+              <div class="points">
+                <div class="">
+                  <div class="">
+                    TOTAL
+                  </div>
+                  <div class="">
+                    <span style="font-size: 2rem;">PUNKTE<span id="points" style="color:#49ffce;text-shadow: 0 0 1rem #49ffce;">0</span></span>
+                  </div>
+                </div>
+              </div>
+
+            <div class="hints">
+              <h2 style="color:#49ffce;text-shadow: 0 0 1rem #49ffce;">TIPPS:</h2>
+              <div class="hint" id="hint1"></div>
+              <div class="hint" id="hint2"></div>
+              <div class="hint" id="hint3"></div>
+            </div>
+          </div>
+
+
+          <div class="usedFrame" ><!-- Tipps Freischalten senkt die Punktzahl, aber macht das Level einfacher -->
+            <h3>Geprüfte Nummern</h3>
+            <div>
+                <div class="wrongIcon">X</div>
+                <div id="usedDisplay"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </main>
+      <footer>
+        <a>© 2020 |  Jendrik Ludwig</a>
+        <a onclick="window.open('contact.html','_self')">Kontakt</a>
+        <a onclick="window.open('impress.html','_self')">Impressum</a>
+          
+      </footer>
+  </body>
+</html>

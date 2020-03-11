@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    
+    <title>NUMBERGUESSER - Kontakt!</title>
+    
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/print.css"><!--CSS für den Druck der Regeln-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="img/logo.png" rel="icon">
+
+
+    <script src="JavaScript/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="JavaScript/animation.js"></script>
+
+</head>
+  <body>
+
+
+        <header onclick="window.open('index.html','_self')">
+            <img src="img/logo.png" id="logoAni">
+            <b><span style="color:#49ffce;">NUMBR</span>GUESSER</b>
+        </header>
+        <main>
+            <!--Layout Kontakt-->
+            
+            
+            <article id="contact">
+                <h5>HAST DU</h5>
+                <h4>FEEDBACK?</h4>
+                <p>Da wir momentan noch in der Entwicklung sind, würden wir uns freuen von dir Feedback zu unserem Spiel zu bekommen! Gerne stehen wir dir auch zu weiteren Fragen zur Verfügung!</p>
+                <div id="rating">
+                    <h5 style="color: #49ffce">Wie hat dir das Spiel gefallen ?</h5>
+                    <div id="ratingSelect">
+                        
+                        <p>Nicht Wirklich</p>
+                        <div id="querySelector">
+                            <div id="s1" onclick="selector(1)"></div>
+                            <div id="s2" onclick="selector(2)"></div>
+                            <div id="s3" onclick="selector(3)"></div>
+                            <div id="s4" onclick="selector(4)"></div>
+                            <div id="s5" onclick="selector(5)"></div>
+                            <div id="s6" onclick="selector(6)"></div>
+                        </div>
+                        
+                        <p>Sehr Gut!</p></div>
+                
+                </div>
+                <form class="contact">
+                
+                    <input class="contact" placeholder="Deine Mail-Adresse">
+                    <input class="contact" placeholder="Dein Name">
+                    <textarea class="contact"  placeholder="Deine Nachricht"></textarea>
+                
+                </form>
+                <div class="button" id="nextBtn" onclick="window.open('index.html','_self')">Absenden</div>
+            </article>
+            
+            
+            
+            
+
+        </main>
+        <footer>
+            <a>© 2020 |  Jendrik Ludwig</a>
+            <a onclick="window.open('contact.html','_self')">Kontakt</a>
+            <a onclick="window.open('impress.html','_self')">Impressum</a>
+          
+        </footer>
+  </body>
+</html>
